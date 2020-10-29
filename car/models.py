@@ -13,3 +13,6 @@ class Car(models.Model):
     year = models.IntegerField(verbose_name='Год выпуска')
     transmission = models.SmallIntegerField(choices=TRANSMISSIONS, verbose_name='Коробка передач')
     color = models.CharField(max_length=32, verbose_name='Цвет')
+
+    def __str__(self):
+        return '{make} {model} {year}'.format(make=self.make, model=self.model, year=str(self.year))
