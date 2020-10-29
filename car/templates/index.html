@@ -5,13 +5,13 @@
     <title>Главная страница</title>
 </head>
 <body>
-    {% for car in cars %}
+    {% for car in car_list %}
     <div class="car-card">
-        <h3>car.make</h3>
-        <h4>car.model</h4>
-        <p>car.year</p>
-        <p>car.transmission</p>
-        <p>car.color</p>
+        <h3>{{ car.make }}</h3>
+        <h4>{{ car.model }}</h4>
+        <p>{{ car.year }}</p>
+        <p>{{ car.get_transmission_display }}</p>
+        <p>{{ car.color }}</p>
     </div>
     <hr>
     {% endfor %}
