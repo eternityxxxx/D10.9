@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    {% for car in cars %}
+    <div class="car-card">
+        <h3>car.make</h3>
+        <h4>car.model</h4>
+        <p>car.year</p>
+        <p>car.transmission</p>
+        <p>car.color</p>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+</html>
