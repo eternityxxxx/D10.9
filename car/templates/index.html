@@ -33,11 +33,11 @@
 
     <main>
         <div class="container mt-3">
-             <form method="GET" action=".">
+             <form method="GET" action="{% url 'car_search' %}">
                 <div class="form-row">
                     <div class="form-group col-12">
                         <div class="input-group">
-                            <input class="form-control py-2 border-right-0 border" type="search" name="id_exact" placeholder="Марка" />
+                            <input class="form-control py-2 border-right-0 border" type="search" name="make" placeholder="Марка" />
                             <span class="input-group-append">
                                 <div class="input-group-text bg-transparent">
                                     <i class="fa fa-search"></i>
@@ -49,7 +49,19 @@
                 <div class="form-row">
                     <div class="form-group col-12">
                         <div class="input-group">
-                            <input class="form-control py-2 border-right-0 border" type="search" name="title_or_author" placeholder="Модель" />
+                            <input class="form-control py-2 border-right-0 border" type="search" name="model" placeholder="Модель" />
+                            <span class="input-group-append">
+                                <div class="input-group-text bg-transparent">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <div class="input-group">
+                            <input class="form-control py-2 border-right-0 border" type="search" name="color" placeholder="Цвет"/>
                             <span class="input-group-append">
                                 <div class="input-group-text bg-transparent">
                                     <i class="fa fa-search"></i>
@@ -60,13 +72,13 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-2 col-lg-2">
-                    <label for="viewCountMin">Год выпуска</label>
-                    <input type="number" min=1998 max="2020" class="form-control" id="viewCountMin" placeholder="" name="view_count_min">
+                    <label for="year">Год выпуска</label>
+                    <input type="number" min=1998 max="2020" class="form-control" id="year" placeholder="" name="year">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="category">Коробка передач</label>
-                    <select id="category" class="form-control" name="category">
-                      <option selected>Не выбрано..</option>
+                    <label for="transmission">Коробка передач</label>
+                    <select id="transmission" class="form-control" name="transmission">
+                      <option selected></option>
                       <option value="1">Механика</option>
                       <option value="2">Автомат</option>
                       <option value="3">Робот</option>
